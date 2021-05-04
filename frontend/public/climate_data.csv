@@ -1,0 +1,8 @@
+country,A_temp,Average humidity,Average dewpoint (°F),Average barometer (in),Average windspeed (mph),Average gustspeed (mph),Average direction (°deg),Rainfall for month (in),Rainfall for year (in),Maximum rain per minute,Maximum temperature (°F),Minimum temperature (°F),Maximum humidity (%),Minimum humidity (%),Maximum pressure,Minimum pressure,Maximum windspeed (mph),Maximum gust speed (mph),Maximum heat index (°F),Date1,Month,diff_pressure
+JAPAN,37.8,35,12.7,29.7,26.4,36.8,274,0,0,0,40,34,4,27,29.762,29.596,41.4,59,40,1/1/2009,1,0.166
+UK,43.2,32,14.7,29.5,12.8,18,240,0,0,0,52,37,4,16,29.669,29.268,35.7,51,52,1/2/2009,1,0.401
+USA,25.7,60,12.7,29.7,8.3,12.2,290,0,0,0,41,6,8,35,30.232,29.26,25.3,38,41,1/3/2009,1,0.972
+BRUNAI,9.3,67,0.1,30.4,2.9,4.5,47,0,0,0,19,0,7,35,30.566,30.227,12.7,20,32,1/4/2009,1,0.339
+INDONESIA,23.5,30,-5.3,29.9,16.7,23.1,265,0,0,0,30,15,5,13,30.233,29.568,38,53,32,1/5/2009,1,0.665
+INDIA,24.8,42,4.6,29.8,16,23.9,276,0,0,0,29,19,5,27,29.879,29.637,29.9,48,32,1/6/2009,1,0.242
+PAKISTAN,34.2,60,21.6,29.7,20.4,30,276,0,0,0,39,27,8,46,29.86,29.602,38,54,39,1/7/2009,1,0.2
