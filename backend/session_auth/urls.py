@@ -2,6 +2,7 @@ from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from django.contrib import admin
 
+# include all app url here 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),

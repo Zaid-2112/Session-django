@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from .models import UserProfile
 from .serializers import UserProfileSerializer
 
+# after Sucssfully create user and login user get user profile view
 class GetUserProfileView(APIView):
     def get(self, request, format=None):
         try:
@@ -16,6 +17,7 @@ class GetUserProfileView(APIView):
         except:
             return Response({ 'error': 'Something went wrong when retrieving profile' })
 
+# update existing user profile 
 class UpdateUserProfileView(APIView):
     def put(self, request, format=None):
         try:

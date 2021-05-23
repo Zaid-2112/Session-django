@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'session_auth.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# this is MongoDb database connection
 DATABASES = {
      'default': {
          'ENGINE': 'djongo',
@@ -120,7 +120,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+# this build folder belongs to frontend and craete build folder using npm run build
+# copy this(build) folder in backend from frontend
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')

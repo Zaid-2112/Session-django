@@ -8,6 +8,10 @@ from .serializers import UserSerializer
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_protect
 from django.utils.decorators import method_decorator
 
+"""A decorator is a design pattern in Python that allows a user to add new functionality to an existing object 
+  without modifying its structure.
+ Decorators are usually called before the definition of a function you want to decorate."""
+# auth view code
 class CheckAuthenticatedView(APIView):
     def get(self, request, format=None):
         user = self.request.user
@@ -22,6 +26,7 @@ class CheckAuthenticatedView(APIView):
         except:
             return Response({ 'error': 'Something went wrong when checking authentication status' })
 
+# Craete Signup page through this logic and apply all conditions on signup page
 @method_decorator(csrf_protect, name='dispatch')
 class SignupView(APIView):
     permission_classes = (permissions.AllowAny, )
@@ -54,6 +59,8 @@ class SignupView(APIView):
                 return Response({ 'error': 'Something went wrong when registering account' })
 
 @method_decorator(csrf_protect, name='dispatch')
+
+# create login page through this logic 
 class LoginView(APIView):
     permission_classes = (permissions.AllowAny, )
 
@@ -74,6 +81,7 @@ class LoginView(APIView):
         except:
             return Response({ 'error': 'Something went wrong when logging in' })
 
+# logout logic 
 class LogoutView(APIView):
     def post(self, request, format=None):
         try:
@@ -83,12 +91,15 @@ class LogoutView(APIView):
             return Response({ 'error': 'Something went wrong when logging out' })
 
 @method_decorator(ensure_csrf_cookie, name='dispatch')
+
+# this show how Csrf token get
 class GetCSRFToken(APIView):
     permission_classes = (permissions.AllowAny, )
 
     def get(self, request, format=None):
         return Response({ 'success': 'CSRF cookie set' })
 
+# delete account view page when perform action Delete through delete buttton
 class DeleteAccountView(APIView):
     def delete(self, request, format=None):
         user = self.request.user
